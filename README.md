@@ -16,6 +16,8 @@ Results: This folder consists of all our raw results. There are three types of f
 - fscore_MITDB.xlsx: raw average F1-scores on the 201_A_pyramid dataset, which we have used in our case study.
 - responseTimes.xlsx: average user interaction response time of all model selection methods on all the UCR datasets we have used. The average response time on 201_A_pyramid is 0.05s as we have reported in our paper.
 
+Seeds: seed files used by the code. You do not need to care about their details.
+
 # How to use the code
 Please take the following steps to obtain PUTSC model selection results.
 1. Use GPU-DTW.cu to calculate the DTW distances.
