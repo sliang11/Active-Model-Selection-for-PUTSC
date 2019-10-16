@@ -41,4 +41,5 @@ Input parameters of modelSelection.cpp
 - outputPath: output path of model selection results
 
 Final output of modelSelection.cpp
-- F1-score files. The naming format is [dataset]_fscoreByRound_rand10_[Sampling strategy]_
+- F1-score files. The naming format is "\[dataset\]\_fscoreByRound\_rand10\_\[Sampling strategy\]\_\[ST-1NN seed ID\]\_.txt", for example "GunPointMaleVersusFemale_fscoreByRound_rand10_Dis_IFE_3.txt". The ST-1NN seed ID is among 0-9 which correspond to the ten runs with different initial PL set. In the file, the _i_-th data point corresponds to the F1-score of the selected model (if multiple models are selected, we use their average F1-scores) when the number of queried labels is _i_.
+- User interaction response time files. The naming format is "\[dataset\]\_avgTimeBetweenQueries_rand10\_\[ST-1NN seed ID\]\_.txt", for example "GunPointMaleVersusFemale_avgTimeBetweenQueries_rand10_3.txt". The single data point in this file corresponds to the average user interaction response time for the current ST-1NN seed.
