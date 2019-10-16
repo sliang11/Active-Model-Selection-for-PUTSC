@@ -303,6 +303,9 @@ int main(int argc, char** argv) {
 	const std::vector<std::string> v_str_scoreMethod{ "Un", "Dis", "Inf", "InfUn", "InfKLD", "Rand" };
 	const std::vector<std::string> v_str_evalMethod = { "NV", "NFE", "IFE" };
 	int numEvalMethods = v_evalMethod.size();
+	
+	if (access(outputPath.c_str(), F_OK) == -1)
+		mkdir(outputPath.c_str(), S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
 
 	//load time series
 	size_t trainTssBytes = numTrain * tsLen * sizeof(double);
