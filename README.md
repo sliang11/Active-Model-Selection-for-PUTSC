@@ -1,5 +1,21 @@
 This repository holds the source code and raw experimental results of ICDE 2020 paper 441 "Active Model Selection for Positive Unlabeled Time Series Classification".
 
+# Overview
+This repository has the following folders.
+
+Code: all our source code. We will later show how to use the paper.
+
+Data: a sample UCR dataset (GunPointMaleVersusFemale), as well as the data (201_A_pyramid) we used in the case study in arrhythmia detection. The latter has been formatted in the same way as the UCR datasets. The label "1" correspond to the VEB class, while the label "0" correspond to other types of heartbeats. 
+
+Note that we have only provided the training set. This is because in transductive PUTSC, there are no testing sets in the conventional sense. Therefore, following the practice of the paper listed below, we only used the training sets in our experiments.
+
+    Mabel González Castellanos, Christoph Bergmeir, Isaac Triguero, Yanet Rodríguez, José Manuel Benítez: On the stopping criteria for k-Nearest Neighbor in positive unlabeled time series classification problems. Inf. Sci. 328: 42-59 (2016)
+    
+Results: This folder consists of all our raw results. There are three types of files in this folder:
+- Files that are formatted as "fscore_0.xx.xlsx" are raw average F1-scores on the UCR datasets. The "0.xx" in the file name indicate the percentatage of queried U examples. For instance, "fscore_0.1.xlsx" consists of the raw results of all model selection methods on all the datasets with 10% of the U examples queried.
+- fscore_MITDB.xlsx: raw average F1-scores on the 201_A_pyramid dataset, which we have used in our case study.
+- responseTimes.xlsx: average user interaction response time of all model selection methods on all the UCR datasets we have used. The average response time on 201_A_pyramid is 0.05s as we have reported in our paper.
+
 # How to use the code
 Please take the following steps to obtain PUTSC model selection results.
 1. Use GPU-DTW.cu to calculate the DTW distances.
@@ -34,6 +50,7 @@ Input parameters of modelSelection.cpp
 - numTrain: number of examples in the dataset, for example "135"
 - numP: number of positive examples, for example "71". We use the label "1" as the positive class.
 - tsLen: time series length, for example "150"
+- numRandRuns: the number of runs for random sampling based methods. Do NOT change its default value as it can lead to mistakes in subsequent outputs.
 - minIntWarp, maxIntWarp, intWarpStep: optional parameters related to DTW warping windows. Do NOT change their default settings as it can lead to mistakes in subsequent outputs.
 - datasetPath: path to the dataset folder 
 - ST1NNPath: path to ST-1NN results
