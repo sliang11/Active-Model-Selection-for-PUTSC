@@ -7,6 +7,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include <algorithm>
+#include <unistd.h>
+#include <sys/stat.h>
 
 #define INF 1e6
 #define MAX_CHAR 10
@@ -387,7 +389,7 @@ std::vector<std::tuple<int, int, int, int>> getIntervals(double* minNNDists, int
 	return intervals;
 }
 
-//Mabel Gonz¡§¡élez Castellanos, Christoph Bergmeir, Isaac Triguero, Yanet Rodr¡§aguez, Jos¡§| Manuel Ben¡§atez: On the stopping criteria for k - Nearest Neighbor in positive unlabeled time series classification problems. Inf.Sci. 328: 42-59 (2016)
+//Mabel GonzÂ¨ï¿ lez Castellanos, Christoph Bergmeir, Isaac Triguero, Yanet RodrÂ¨aguez, JosÂ¨| Manuel BenÂ¨atez: On the stopping criteria for k - Nearest Neighbor in positive unlabeled time series classification problems. Inf.Sci. 328: 42-59 (2016)
 void sc_GBTRM(int* preNumPs, double* minNNDists, int minNumP, int maxNumP, int numTrain, int numPLabeled, double beta) {
 
 	int initNumU = numTrain - numPLabeled;
@@ -475,6 +477,9 @@ int main(int argc, char** argv) {
 	const int numSeeds = min(numP, 10);
 
 	std::string fName;
+	
+	if (access(outputPath.c_str(), F_OK) == -1)
+		mkdir(outputPath.c_str(), S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
 
 	//load time series
 	size_t trainTssBytes = numTrain * tsLen * sizeof(double);
