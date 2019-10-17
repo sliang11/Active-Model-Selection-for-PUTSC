@@ -281,10 +281,10 @@ int main(int argc, char** argv) {
 	const int numTrain = atoi(argv[2]);
 	const int numP = atoi(argv[3]);
 	const int tsLen = atoi(argv[4]);
-	const int numRandRuns = argc > 5 ? atoi(argv[5]) : 10;
-	const int minIntWarp = argc > 6 ? atoi(argv[6]) : 0;
-	const int maxIntWarp = argc > 7 ? atoi(argv[7]) : 20;
-	const int intWarpStep = argc > 8 ? atoi(argv[8]) : 1;
+	const int numRandRuns = argc > 5 ? atoi(argv[5]) : 10;	//Do NOT change this setting!
+	const int minIntWarp = argc > 6 ? atoi(argv[6]) : 0;	//Do NOT change this setting!
+	const int maxIntWarp = argc > 7 ? atoi(argv[7]) : 20;	//Do NOT change this setting!
+	const int intWarpStep = argc > 8 ? atoi(argv[8]) : 1;	//Do NOT change this setting!
 	const std::string datasetPath = argc > 9 ? argv[9] : "../Data";
 	const std::string ST1NNPath = argc > 10 ? argv[10] : "../Results/ST1NN";
 	const std::string seedPath = argc > 11 ? argv[11] : "../Seeds/ModelSelection";
