@@ -1,9 +1,7 @@
-This repository holds the source code and raw experimental results of ICDE 2020 paper 441 "Active Model Selection for Positive Unlabeled Time Series Classification".
-
 # Overview
-This repository has the following folders.
+This repository holds the source code and raw experimental results of ICDE 2020 paper 441 "Active Model Selection for Positive Unlabeled Time Series Classification". This repository has the following four folders.
 
-Code: all our source code. We will later show how to use the paper.
+Code: all our source code. We will later show how to use it.
 
 Data: a sample UCR dataset (GunPointMaleVersusFemale), as well as the data (201_A_pyramid) we used in the case study in arrhythmia detection. The latter has been formatted in the same way as the UCR datasets. The label "1" correspond to the VEB class, while the label "0" correspond to other types of heartbeats. 
 
