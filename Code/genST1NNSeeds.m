@@ -1,4 +1,7 @@
 function genST1NNSeeds(dataset, ST1NNSeedPath, datasetPath)
+% dataset: name of dataset
+% ST1NNSeedPath: output path
+% datasetPath: path to the dataset folder
 
 pLabel = 1;
 numLabeled = 1;
