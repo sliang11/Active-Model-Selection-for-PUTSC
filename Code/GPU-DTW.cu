@@ -38,7 +38,7 @@ __device__ void getNormalizedTerm(double &term, double mu, double sigma){
 	term = (term - mu) / sigma;
 }
 
-__device__ void dtw(double &dist, double *ts, double *query, double *tmp,
+__device__ void dtw(double &dist, double *ts, double *query, double *tmp,	//Does NOT support comparison between time series with unequal lengths (will lead to mistakes with only trivial modifications)
 	const int tsLen, const int maxWarp){
 
 	double term1, term2, mu1, sigma1, mu2, sigma2;
