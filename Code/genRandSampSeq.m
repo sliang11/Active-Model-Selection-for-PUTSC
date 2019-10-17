@@ -1,4 +1,8 @@
 function genRandSampSeq(dataset, datasetPath, ST1NNSeedPath, modelSelectSeedPath)
+% dataset: name of dataset
+% datasetPath: path to the dataset folder
+% ST1NNSeedPath: path to the file consisting of initial PL example indices for the multiple runs of ST-1NN
+% modelSelectSeedPath: output path
 
 numRandRuns = 10;
 initNumPLabeled = 1;
