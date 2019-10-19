@@ -62,7 +62,7 @@ In our paper, we have used two data sources: the UCR archive and MIT-BIH Arrhyth
 
 As with UCR datasets, we have used the original data without further editing. The complete datasets are available at http://www.cs.ucr.edu/~eamonn/time_series_data_2018/. Note that for datasets with missing values and variable time series lengths, the UCR archive has provided officially preprocessed versions of them, which is the data we have used in our experiments.
 
-As with MITDB data, we have used lead A of Record 201. The original data is available at https://physionet.org/content/mitdb/1.0.0/. We have preprocessed the data following the practice of this paper. 
+As with MITDB data, we have used lead A of Record 201. The original data is available at https://physionet.org/content/mitdb/1.0.0/. We have preprocessed the data following the practice of this paper below. 
 
     J. He, L. Sun, J. Rong, H. Wang, and Y. Zhang, “A pyramid-like model for heartbeat classification from ECG recordings,” PLOS ONE, vol. 13, pp. 1–19, 11 2018
 
