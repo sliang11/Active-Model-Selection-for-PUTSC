@@ -62,7 +62,7 @@ In our paper, we have used two data sources: the UCR archive and MIT-BIH Arrhyth
 
 As with UCR datasets, we have used the original data without further editing. The complete datasets are available at http://www.cs.ucr.edu/~eamonn/time_series_data_2018/. Note that for datasets with missing values and variable time series lengths, the UCR archive has provided officially preprocessed versions of them, which is the data we have used in our experiments.
 
-As with MITDB data, we have used lead A of Record 201. The original data is available at https://physionet.org/content/mitdb/1.0.0/. We have preprocessed the data following the practice of the following paper. 
+As with MITDB data, we have used lead A of Record 201. The original data is available at https://physionet.org/content/mitdb/1.0.0/. We have preprocessed the data following the practice of this paper. 
 
     J. He, L. Sun, J. Rong, H. Wang, and Y. Zhang, “A pyramid-like model for heartbeat classification from ECG recordings,” PLOS ONE, vol. 13, pp. 1–19, 11 2018
 
@@ -72,4 +72,4 @@ Note that for UCR datasets, we only used the training sets. This is because in t
 
     Mabel González Castellanos, Christoph Bergmeir, Isaac Triguero, Yanet Rodríguez, José Manuel Benítez: On the stopping criteria for k-Nearest Neighbor in positive unlabeled time series classification problems. Inf. Sci. 328: 42-59 (2016)
     
-As with MITDB data, we used the entire record (a small proportion of the data is discarded in the preprocessing phase) which was not separated into training and testing sets by the original contributors. The file "201_A_pyramid_TRAIN.tsv" was the Data folder is named this way only to facilite file reading by our code. It does NOT correspond to an actual training set.
+As with MITDB data, we used the entire record (a small proportion of the data is discarded in the preprocessing phase) which was not separated into training and testing sets by the original contributors. The file "201_A_pyramid_TRAIN.tsv" was the Data folder is named this way only to facilitate file reading by our code. It does NOT correspond to an actual training set.
