@@ -54,7 +54,7 @@ Input parameters of modelSelection.cpp
 - outputPath: output path of final model selection results
 
 Final output of modelSelection.cpp includes the following.
-- F1-score files. The naming format is "\[dataset\]\_fscoreByRound\_rand10\_\[Sampling strategy\]\_\[Evaluation strategy\]\_\[ST-1NN seed ID\]\_.txt", for instance "GunPointMaleVersusFemale_fscoreByRound_rand10_Dis_IFE_3.txt". The ST-1NN seed ID is among 0-9 which correspond to the ten runs with different initial PL set. Each file consists of numU datapoints where numU is the number of U examples. The _i_-th data point is the F1-score of the selected model when the number of queried U example is _i_. If there are ties between multiple selected models, we use their average F1-score.
+- F1-score files. The naming format is "\[dataset\]\_fscoreByRound\_rand10\_\[Sampling strategy\]\_\[Evaluation strategy\]\_\[ST-1NN seed ID\]\_.txt", for instance "GunPointMaleVersusFemale_fscoreByRound_rand10_Dis_IFE_3.txt". The ST-1NN seed ID is among 0-9 which correspond to the ten runs with different initial PL set. Each file consists of numU datapoints where numU is the number of U examples. The _i_-th data point is the F1-score of the selected model when the number of queried U example is _i_. If there are ties between multiple selected models, we use their average F1-score, as this is the expected F1-score for randomly picking a selected model with equal probability.
 - User interaction response time files. The naming format is "\[dataset\]\_avgTimeBetweenQueries_rand10\_\[ST-1NN seed ID\]\_.txt", for instance "GunPointMaleVersusFemale_avgTimeBetweenQueries_rand10_3.txt". Each file consists of only one datapoint, which is the average user interaction response time (in seconds) for the current ST-1NN seed.
 
 # On the datasets
@@ -64,12 +64,12 @@ As with UCR datasets, we have used the original data without further editing. Th
 
 As with MITDB data, we have used lead A of Record 201. The original data is available at https://physionet.org/content/mitdb/1.0.0/. We have preprocessed the data following the practice of this paper below. 
 
-    J. He, L. Sun, J. Rong, H. Wang, and Y. Zhang, “A pyramid-like model for heartbeat classification from ECG recordings,” PLOS ONE, vol. 13, pp. 1–19, 11 2018
+    J. He, L. Sun, J. Rong, H. Wang, and Y. Zhang, "A pyramid-like model for heartbeat classification from ECG recordings," PLOS ONE, vol. 13, pp. 1–19, 11 2018
 
 For the data preprocessing source code, see https://github.com/SamHO666/A-Pyramid-like-Model-for-Heartbeat-Classification. For user convenience, we have attached the preprocessed dataset (in UCR format, see 201_A_pyramid_TRAIN.tsv in the Data folder) in the Results folder. Note that the data has been relabeled such that the VEB class is labeled as "1", while all other data is labeled as "0".
 
 Note that for UCR datasets, we only used the training sets. This is because in transductive PUTSC, there are no testing sets in the conventional sense. Therefore, following the practice of the paper listed below, we only used the training sets in our experiments.
 
-    Mabel González Castellanos, Christoph Bergmeir, Isaac Triguero, Yanet Rodríguez, José Manuel Benítez: On the stopping criteria for k-Nearest Neighbor in positive unlabeled time series classification problems. Inf. Sci. 328: 42-59 (2016)
+    M. G. Castellanos, C. Bergmeir, I. Triguero, Y. Rodríguez, J. M. Benítez, "On the stopping criteria for k-Nearest Neighbor in positive unlabeled time series classification problems," Inf. Sci. 328, pp. 42-59, 2016
     
 As with MITDB data, we used the entire record (a small proportion of the data is discarded in the preprocessing phase) which was not separated into training and testing sets by the original contributors. The file "201_A_pyramid_TRAIN.tsv" the Data folder was named this way only to facilitate file reading by our code. It does NOT correspond to an actual training set.
