@@ -58,7 +58,7 @@ Final output of modelSelection.cpp includes the following.
 - User interaction response time files. The naming format is "\[dataset\]\_avgTimeBetweenQueries_rand10\_\[ST-1NN seed ID\]\_.txt", for instance "GunPointMaleVersusFemale_avgTimeBetweenQueries_rand10_3.txt". Each file consists of only one datapoint, which is the average user interaction response time (in seconds) for the current ST-1NN seed.
 
 # On the datasets
-In our paper, we have used two data sources: the UCR archive and MIT-BIH Arrhythmia Database (MITDB). Their references and web links can be found in our papar.
+In our paper, we have used two data sources: the UCR archive and MIT-BIH Arrhythmia Database (MITDB). Their references and web links can be found in our paper.
 
 As with UCR datasets, we have used the original data without further editing. The complete datasets are available at http://www.cs.ucr.edu/~eamonn/time_series_data_2018/. Note that for datasets with missing values and variable time series lengths, the UCR archive has provided officially preprocessed versions of them, which is the data we have used in our experiments.
 
