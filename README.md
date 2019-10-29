@@ -66,7 +66,7 @@ As with MITDB data, we have used lead A of Record 201. The original data is avai
 
     J. He, L. Sun, J. Rong, H. Wang, and Y. Zhang, "A pyramid-like model for heartbeat classification from ECG recordings," PLOS ONE, vol. 13, pp. 1–19, 11 2018
 
-For the data preprocessing source code, see https://github.com/SamHO666/A-Pyramid-like-Model-for-Heartbeat-Classification. For user convenience, we have attached the preprocessed dataset (in UCR format, see 201_A_pyramid_TRAIN.tsv in the Data folder) in the Results folder. Note that the data has been relabeled such that the VEB class is labeled as "1", while all other data is labeled as "0".
+For the data preprocessing source code, see https://github.com/SamHO666/A-Pyramid-like-Model-for-Heartbeat-Classification. For user convenience, we have attached the preprocessed dataset (in UCR format, see 201_A_pyramid_TRAIN.tsv in the Data folder). Note that the data has been relabeled such that the VEB class is labeled as "1", while all other data is labeled as "0".
 
 Note that for UCR datasets, we only used the training sets. This is because in transductive PUTSC, there are no testing sets in the conventional sense. Therefore, following the practice of the paper listed below, we only used the training sets in our experiments.
 
