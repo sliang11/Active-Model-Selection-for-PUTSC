@@ -772,10 +772,6 @@ int main(int argc, char** argv) {
 		exportMatrix(nnPIndsAll_DTW, fName, v_intWarps.size(), numTrain - numPLabeled);
 		fName = outputPath + "/" + datasetName + "_nnPInds_DTWD_rand10_single_" + s_seedId + ".txt";
 		exportMatrix(nnPIndsAll_DTWD, fName, v_intWarps.size(), numTrain - numPLabeled);
-		fName = outputPath + "/" + datasetName + "_nnPInds_DTW_rand10_single_" + s_seedId + ".txt";
-		exportMatrix(nnPIndsAll_DTW, fName, v_intWarps.size(), numTrain - numPLabeled);
-		fName = outputPath + "/" + datasetName + "_nnPInds_DTWD_rand10_single_" + s_seedId + ".txt";
-		exportMatrix(nnPIndsAll_DTWD, fName, v_intWarps.size(), numTrain - numPLabeled);
 	}
 
 	free(trainTss);
