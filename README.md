@@ -72,4 +72,4 @@ Note that for UCR datasets, we only used the training sets. This is because in t
 
     M. G. Castellanos, C. Bergmeir, I. Triguero, Y. Rodríguez, J. M. Benítez, "On the stopping criteria for k-Nearest Neighbor in positive unlabeled time series classification problems," Inf. Sci. 328, pp. 42-59, 2016
     
-As with MITDB data, we used the entire record (a small proportion of the data is discarded in the preprocessing phase) which was not separated into training and testing sets by the original contributors. The file "201_A_pyramid_TRAIN.tsv" the Data folder was named this way only to facilitate file reading by our code. It does NOT correspond to an actual training set.
+As with MITDB data, we used the entire record (a small proportion of the data is discarded in the preprocessing phase) which was not separated into training and testing sets by the original contributors. The file "201_A_pyramid_TRAIN.tsv" in the Data folder was named this way only to facilitate file reading by our code. It does NOT correspond to an actual training set.
