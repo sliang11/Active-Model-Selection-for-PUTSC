@@ -2,14 +2,11 @@
 In conjunction with the revision of our paper, we have updated this repository in the following aspects:
 
 1. Uploaded a new MIT-BIH dataset that correspond to Record 205 newly included in the revised paper, including the dataset itself (in Data folder) and the experimental results on it (in fscores_MITDB.xlsx, together with the original results on Record 201).
-
 2. Updated responseTimes.xlsx, added max response times.
-
 3. Uploaded the results of non-AL based baselines on UCR datasets in fscores_non_AL.xlsx.
-
-4. Uploaded the results of performance comparisons between ST-1NN and PUSh in fscores_PUSh_ST-1NN.xlsx. This experiment is intended to show that the latest non-ST-1NN model, PUSh, is significantly weaker than ST-1NN at best. Please see Section "Is ST-1NN the state-of-the-art PUTSC method?" in this readme file for more discussions on this.
-
-5. 
+4. Uploaded the results of performance comparisons between ST-1NN and PUSh in fscores_PUSh_ST-1NN.xlsx. This experiment is intended to show that the latest non-ST-1NN model, PUSh, is significantly weaker than ST-1NN at best. Please see section "Is ST-1NN the state-of-the-art PUTSC paradigm?" in this readme file for more discussions on this.
+5. Uploaded All_Experimental_Figures.pdf which consists of all experimental figures, including those that are in our revised paper, and additional ones that are only mentioned in the paper.
+6. Added additional discussions on issues we encountered when plotting the critical difference diagrams and the way we addressed them. See section "Issues with Critical Difference Diagrams" in this readme file.
 
 # Overview
 This repository holds the source code and raw experimental results of ICDE 2020 paper 441 "Active Model Selection for Positive Unlabeled Time Series Classification". This repository has the following four folders.
@@ -20,8 +17,11 @@ Data: a sample UCR dataset (GunPointMaleVersusFemale), as well as the data (201_
     
 Results: This folder consists of all our raw results. There are three types of files in this folder:
 - fscore_0.xx.xlsx: raw average F1-scores on the UCR datasets, which are used to plot the critical difference diagrams in our paper. The "0.xx" in the file names indicate the percentatage of queried U examples. For instance, "fscore_0.1.xlsx" consists of the raw results of all model selection methods on all datasets with 10% of the U examples queried. Note that the critical difference diagrams are actually plotted using "one minus F1-score" values so as to keep the better performing methods on the right of the diagrams. These values are equal to Van Rijsbergen's effectiveness measure with alpha = 0.5. See https://en.wikipedia.org/wiki/F1_score for more.
-- fscore_MITDB.xlsx: raw average F1-scores on the 201_A_pyramid dataset (used in our case study) with the number of queried U examples ranging from 1 : |U|.
-- responseTimes.xlsx: average user interaction response time of all model selection methods on UCR datasets. The average response time on 201_A_pyramid is 0.05s as we have reported in our paper, which has not been separately listed in the Results folder.
+- fscore_MITDB.xlsx: raw average F1-scores on the 201_A_pyramid and 205_A_pyramid datasets (two spreadsheets in a single file) with the number of queried U examples ranging from 1 : |U|.
+- responseTimes.xlsx: average and maximum user interaction response time of all model selection methods on UCR datasets.
+- fscores_non_AL.xlsx: raw average F1-scores of the 7 non-AL based baselines on the UCR datasets.
+- fscores_PUSh_ST-1NN.xlsx: raw average F1-scores of the ST-1NN and PUSh on the UCR datasets. For ST-1NN, in each run on each dataset we use the result of the best of the 1271 models on that run. For PUSh, due to limited time and the fact that PUSh is too memory-inefficient to run on certain large datasets, only some results are available.
+- All_Experimental_Figures.pdf: all experimental figures, including those in our revised paper, and additional ones that are only mentioned in the paper.
 
 Seeds: seed files used by the code, including the initial PL sets used to run the candidate ST-1NN models, and sampling orders for model selection methods using the randomg sampling (Rand) strategy.
 
