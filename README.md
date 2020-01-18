@@ -1,3 +1,16 @@
+# Update
+In conjunction with the revision of our paper, we have updated this repository in the following aspects:
+
+1. Uploaded a new MIT-BIH dataset that correspond to Record 205 newly included in the revised paper, including the dataset itself (in Data folder) and the experimental results on it (in fscores_MITDB.xlsx, together with the original results on Record 201).
+
+2. Updated responseTimes.xlsx, added max response times.
+
+3. Uploaded the results of non-AL based baselines on UCR datasets in fscores_non_AL.xlsx.
+
+4. Uploaded the results of performance comparisons between ST-1NN and PUSh in fscores_PUSh_ST-1NN.xlsx. This experiment is intended to show that the latest non-ST-1NN model, PUSh, is significantly weaker than ST-1NN at best. Please see Section "Is ST-1NN the state-of-the-art PUTSC method?" in this readme file for more discussions on this.
+
+5. 
+
 # Overview
 This repository holds the source code and raw experimental results of ICDE 2020 paper 441 "Active Model Selection for Positive Unlabeled Time Series Classification". This repository has the following four folders.
 
